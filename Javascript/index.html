@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="">
+		<input type="text" id="txtNumero1" >
+		<input type="text" id="txtNumero2" >
+		<input type="button" value="Sumar" id="btnCalcular" onclick="resultado()">
+		<input type="text" id="txtResultado" >
+
+	</form>
+	<ul id="lista">
+		<li></li>
+	</ul>
+		<p id="uno">eeeeeeelleeee</p>
+		<p>Aolololo</p>
+		<p>ewecffffff</p>
+		<div id="sub"></div>
+	<script>	
+		//Formas de obtener elementos del DOM
+		var elementos=document.getElementsByTagName('p')
+		var elemen=document.getElementById("uno");
+		elemen.innerHTML="";
+		elementos[0].innerHTML="Cambia contenido";
+/////////////////////////
+		//Crear elemento
+		var ele= document.createElement("h2");
+        s
+		//Crear nodo texto/contenido
+		var contenido=document.createTextNode("Esto es un contenidio");
+		//Añadir el nodod de exto al elemento
+		ele.appendChild(contenido);
+		//agregar atributos al elemento
+		ele.setAttribute("align","center");
+		//Agregar elemento al DOM
+		document.getElementById("sub").appendChild(ele);
+		//document.body.appendChild(ele);
+/////////////////////////////
+		//agregar nodos al dom
+
+		var elemento= document.createElement("li");
+		//Crear nodo texto/contenido
+		var contenido=document.createTextNode("Esto es un contenidio");
+		//Añadir el nodod de exto al elemento
+		elemento.appendChild(contenido);
+		var padre=document.getElementById("lista")
+		var padre=document.getElementsByTagName("li")[0].parentNode;
+		var primer_elemento=document.getElementsByTagName("li")[0];
+		padre.insertBefore(elemento,primer_elemento);
+		//padre.appendChild(elemento)
+////////////////////////////
+		//modificando remplanzando y elminaodo nodos del dom
+		
+
+			// body...
+		
+			var texto="Hddola Marcelo";
+			var nuevoTexto=texto.length;
+			var otroTexto=texto.substring(2,8);
+			var otroTexto=texto.replace("Hddola", "Mister");
+
+			document.write(otroTexto);
+		
+			var resultado=function(){
+				//una variable sin var se transforma en global
+				var numero1=parseFloat(document.getElementById('txtNumero1').value);
+				var numero2=parseFloat(document.getElementById('txtNumero2').value);
+				var resultado=numero2+numero1;
+				document.getElementById("txtResultado").value=resultado;
+				//return resultado;
+
+			}
+		
+		
+		
+		
+	</script>
+</body>
+</html>
